@@ -50,15 +50,6 @@ Exo's codebase comprises several key files, each playing a crucial role in deliv
 - `client/utils/gunBackup.ts`: Facilitates secure backups of Gun.js data to a cloud storage provider.
 - `client/utils/digitalId.ts`: Generates and manages unique Digital IDs for each user.
 
-## Installation
-
-To get started with Exo, follow these steps:
-
-1. Clone the Exo repository: `git clone https://github.com/xwedx00/Exo`
-2. Install the necessary dependencies: `npm install`
-3. Start the server: `npm run start-server`
-4. Launch the client-side app: `npm run start-client`
-
 ## Contributions
 
 We welcome contributions from talented developers like you! If you'd like to contribute to Exo's success, please feel free to open pull requests or submit issues on our [GitHub repository](https://github.com/xwedx00/Exo). Together, we can make Exo even better!
