@@ -56,6 +56,6 @@ I welcome contributions from talented developers like you! If you'd like to cont
 
 ## Contact
 
-For any questions, suggestions, or just to say hello, please don't hesitate to reach out at [xwedx00](mailto:xwedx00@protonmail.com).
+For any questions, suggestions, or just to say hello, please don't hesitate to reach me out at [Email](mailto:xwedx00@protonmail.com).
 
 Join Exo today and experience secure and professional messaging like never before! 💼🔒 Keep an eye on our progress as I bring Exo to life, and stay tuned for updates on our GitHub repository.
