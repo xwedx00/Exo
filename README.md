@@ -1,7 +1,7 @@
 # Exo: Secure P2P Messaging App 
 🚧 Under Development 🚧
 
-Welcome to Exo, the cutting-edge messaging app designed for professionals and will potentially backed by million-dollar companies! 💬🔒 Exo is currently under development, and we're working tirelessly to bring you the best secure and professional messaging experience.
+Welcome to Exo, the cutting-edge messaging app designed for professionals and will potentially be backed by million-dollar companies! 💬🔒 Exo is currently under development, and I'm working tirelessly to bring you the best secure and professional messaging experience.
 
 ## Features 🌟
 - ✨ State-of-the-Art Encryption: Exo implements the latest and most secure encryption techniques to safeguard the confidentiality and integrity of your messages. Our app leverages XChaCha20-poly1305 and ECC with X25519 for robust public-key cryptography.
@@ -10,7 +10,7 @@ Welcome to Exo, the cutting-edge messaging app designed for professionals and wi
 - 🔌 Real-Time Communication: Exo utilizes sockets.io to facilitate real-time communication, guaranteeing instantaneous message delivery. In cases where a user is unreachable through Gun.js, sockets.io acts as a relay node, ensuring seamless communication between all users.
 - 🔒 User Authentication and Authorization: Prioritizing security, Exo enforces robust user authentication on the server side. Users must be authenticated by the server before they can communicate with other authenticated users, providing a secure environment for all interactions.
 - 🆔 Anonymous ID: Exo assigns a unique anonymous ID to each user across the entire network. Personal details, such as phone numbers and emails, are never exposed during communication, preserving user privacy at all times.
-- 🔐 End-to-End Encryption (E2EE): Exo takes privacy seriously. We have implemented end-to-end encryption for all messages transmitted via Gun.js P2P or the sockets.io server. Only the sender and intended recipient can decrypt and access the messages, ensuring maximum confidentiality.
+- 🔐 End-to-End Encryption (E2EE): Exo takes privacy seriously. I have implemented end-to-end encryption for all messages transmitted via Gun.js P2P or the sockets.io server. Only the sender and intended recipient can decrypt and access the messages, ensuring maximum confidentiality.
 
 ## Technical Details
 
@@ -52,10 +52,10 @@ Exo's codebase comprises several key files, each playing a crucial role in deliv
 
 ## Contributions
 
-We welcome contributions from talented developers like you! If you'd like to contribute to Exo's success, please feel free to open pull requests or submit issues on our [GitHub repository](https://github.com/xwedx00/Exo). Together, we can make Exo even better!
+I welcome contributions from talented developers like you! If you'd like to contribute to Exo's success, please feel free to open pull requests or submit issues on our [GitHub repository](https://github.com/xwedx00/Exo). Together, we can make Exo even better!
 
 ## Contact
 
-For any questions, suggestions, or just to say hello, please don't hesitate to reach out to us at [xwedx00@protonmail.com](mailto:xwedx00@protonmail.com).
+For any questions, suggestions, or just to say hello, please don't hesitate to reach out at [xwedx00](mailto:xwedx00@protonmail.com).
 
-Join Exo today and experience secure and professional messaging like never before! 💼🔒 Keep an eye on our progress as we bring Exo to life, and stay tuned for updates on our GitHub repository.
+Join Exo today and experience secure and professional messaging like never before! 💼🔒 Keep an eye on our progress as I bring Exo to life, and stay tuned for updates on our GitHub repository.
