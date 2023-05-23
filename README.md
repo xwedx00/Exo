@@ -1,61 +1,109 @@
-# Exo: Secure P2P Messaging App 
-🚧 Under Development 🚧
+# Proposal for Exo App
 
-Welcome to Exo, the cutting-edge messaging app designed for professionals and will potentially be backed by million-dollar companies! 💬🔒 Exo is currently under development, and I'm working tirelessly to bring you the best secure and professional messaging experience.
+## Introduction
 
-## Features 🌟
-- ✨ State-of-the-Art Encryption: Exo implements the latest and most secure encryption techniques to safeguard the confidentiality and integrity of your messages. Our app leverages XChaCha20-poly1305 and ECC with X25519 for robust public-key cryptography.
-- 🌐 Decentralized P2P Messaging: Powered by Gun.js, Exo offers decentralized peer-to-peer messaging capabilities. You can seamlessly send and receive messages directly between devices, ensuring efficient and reliable communication. Even when you're offline, Exo's offline-first approach syncs your messages as soon as you regain connectivity.
-- 💾 Offline-First Storage: Exo leverages IndexedDB, a fast and reliable local storage mechanism, for efficient data storage. This ensures that your messages are always accessible, even in offline scenarios.
-- 🔌 Real-Time Communication: Exo utilizes sockets.io to facilitate real-time communication, guaranteeing instantaneous message delivery. In cases where a user is unreachable through Gun.js, sockets.io acts as a relay node, ensuring seamless communication between all users.
-- 🔒 User Authentication and Authorization: Prioritizing security, Exo enforces robust user authentication on the server side. Users must be authenticated by the server before they can communicate with other authenticated users, providing a secure environment for all interactions.
-- 🆔 Anonymous ID: Exo assigns a unique anonymous ID to each user across the entire network. Personal details, such as phone numbers and emails, are never exposed during communication, preserving user privacy at all times.
-- 🔐 End-to-End Encryption (E2EE): Exo takes privacy seriously. I have implemented end-to-end encryption for all messages transmitted via Gun.js P2P or the sockets.io server. Only the sender and intended recipient can decrypt and access the messages, ensuring maximum confidentiality.
+Exo is a state-of-the-art encrypted file sharing and messaging application that prioritizes security, privacy, and user experience. By leveraging advanced technologies such as the Signal Protocol, decentralized peer-to-peer (P2P) messaging, offline-first storage, and real-time communication, Exo provides a secure and seamless file sharing and messaging experience. This proposal outlines the key features and technical details of Exo.
 
-## Technical Details
+## Key Features
 
-Exo's codebase comprises several key files, each playing a crucial role in delivering our innovative solutions:
+1. **File Sharing using Signal Protocol and CDNs**
+   - Enable users to share various file types, including images, videos, and audio files.
+   - Implement the Signal Protocol for end-to-end encryption of shared files, ensuring robust data confidentiality and integrity.
+   - Integrate with a Content Delivery Network (CDN) for efficient storage and delivery of shared files.
 
-### Server-side
-- `server.ts`: The entry point for the server, responsible for server initialization, route setup, and controller management.
-- `controllers/authController.ts`: Handles user authentication functionality, including signup and login processes.
-- `controllers/userController.ts`: Manages user-related functionality, such as fetching and updating user data.
-- `controllers/messageController.ts`: Provides message-related functionality, facilitating message sending and receiving.
-- `models/user.ts`: Defines the User model, specifying the user data schema for the database.
-- `routes/authRoutes.ts`: Defines routes for user authentication, such as signup and login routes.
-- `routes/userRoutes.ts`: Defines routes for user-related actions, such as fetching user data.
-- `middleware/authMiddleware.ts`: Provides middleware functions for user authentication, such as token verification.
-- `utils/encryption.ts`: Implements encryption functionality, utilizing XChaCha20-poly1305 and ECC with X25519 for public-key cryptography.
-- `utils/keyManagement.ts`: Manages encryption keys, including generation and storage for each user.
-- `utils/randomGenerator.ts`: Generates random data, such as salts and initialization vectors, utilized in encryption.
-- `utils/cloudBackup.ts`: Enables encrypted cloud backups of user data, ensuring secure storage on a cloud provider.
-- `utils/digitalId.ts`: Generates and manages unique Digital IDs for each user, facilitating external database storage.
+2. **End-to-End Encryption (E2EE) of Messages and File Sharing**
+   - Utilize the Signal Protocol to establish secure communication channels for both messages and shared files.
+   - Implement encryption utility functions, including encryptMessage, decryptMessage, encryptFile, and decryptFile, to ensure data privacy.
 
-### Client-side
-- `client/app.ts`: The entry point for the client-side application
+3. **Decentralized P2P Messaging with Gun.js**
+   - Leverage Gun.js, a decentralized graph database, to enable peer-to-peer messaging within Exo.
+   - Empower direct communication between devices, ensuring reliable messaging even in scenarios where the server is unreachable.
 
-, responsible for initializing the app and rendering the UI.
-- `client/components/Login.tsx`: Renders the login form and handles user authentication on the client-side.
-- `client/components/Register.tsx`: Renders the registration form and handles user registration on the client-side.
-- `client/components/Chat.tsx`: Provides the main chat interface, displaying messages and enabling message sending and receiving.
-- `client/components/MessageList.tsx`: Renders the message list, displaying messages within the chat interface.
-- `client/components/MessageForm.tsx`: Renders the message input form, allowing users to enter and send messages.
-- `client/components/UserList.tsx`: Renders the user list, displaying online users.
-- `client/components/UserListItem.tsx`: Renders a single user item within the user list.
-- `client/utils/encryption.ts`: Implements encryption functionality using XChaCha20-poly1305 and ECC with X25519 for public-key cryptography.
-- `client/utils/keyManagement.ts`: Manages encryption keys, including generation and storage for each user on the client-side.
-- `client/utils/gunOffline.ts`: Enhances Gun.js with offline functionality, enabling message sending and receiving even when offline.
-- `client/utils/gunSetup.ts`: Sets up Gun.js database configurations and initializes the database.
-- `client/utils/randomGenerator.ts`: Generates random data, such as salts and initialization vectors, used in encryption.
-- `client/utils/gunBackup.ts`: Facilitates secure backups of Gun.js data to a cloud storage provider.
-- `client/utils/digitalId.ts`: Generates and manages unique Digital IDs for each user.
+4. **Offline-First Storage with PouchDB**
+   - Implement PouchDB, a fast and reliable local storage mechanism, to enable offline messaging and file access.
+   - Store messages and shared files locally and synchronize them with the server when an internet connection becomes available.
 
-## Contributions
+5. **Real-Time Communication using Sockets.io**
+   - Utilize Sockets.io to enable real-time communication between users, facilitating instantaneous message delivery.
+   - Enhance the messaging experience through efficient and responsive socket-based communication.
 
-I welcome contributions from talented developers like you! If you'd like to contribute to Exo's success, please feel free to open pull requests or submit issues on our [GitHub repository](https://github.com/xwedx00/Exo). Together, we can make Exo even better!
+6. **User Authentication and Authorization with SuperTokens**
+   - Implement robust user authentication and authorization using SuperTokens, ensuring secure communication channels between authenticated users.
+   - Safeguard user data and maintain the integrity of the messaging and file sharing functionalities.
 
-## Contact
+7. **Unique Anonymous IDs for User Privacy**
+   - Assign unique anonymous IDs to each user to protect their privacy and prevent the exposure of personal details.
+   - Enable seamless communication within the Exo app while preserving user anonymity.
 
-For any questions, suggestions, or just to say hello, please don't hesitate to reach me out at [Email](mailto:xwedx00@protonmail.com).
+## Tech Stack
 
-Join Exo today and experience secure and professional messaging like never before! 💼🔒 Keep an eye on our progress as I bring Exo to life, and stay tuned for updates on our GitHub repository.
+**Frontend:**
+- Framework: React
+- Performance Optimization: Qwik
+
+**Backend:**
+- Runtime Environment: Node.js
+- Web Framework: Express
+
+**P2P Messaging:**
+- Library: Gun.js
+- Offline Messaging: P2P-Socket.io
+
+**Encryption:**
+- Protocol: Signal Protocol
+
+**Storage:**
+- Database: Prisma, PlanetScale
+- Local Storage: PouchDB
+
+**Real-Time Communication:**
+- Library: Sockets.io
+
+**Authentication:**
+- Solution: SuperTokens
+
+**CDN:**
+- Custom CDN Integration
+
+**Load Balancer:**
+- Options: HAProxy or Nginx
+
+## Frontend Directory Structure
+
+```plaintext
+- components/: Reusable UI components
+- chat/: Chat UI components (message input, message list, file sharing UI)
+- user/: User interface components (login, registration, profile, etc.)
+- pages/: Application pages and routes
+  - chat/: Chat page and route
+  - user/: User page and route
+- utils/: Helper functions and utilities
+- encryption/: Encryption utility functions (e.g., encryptMessage, decryptMessage, encryptFile, decryptFile)
+- network/: Network utility functions (e.g., sendP2PMessage, handleP2PMessage)
+- api/: API service for communicating with the backend
+- config/: Configuration files (e.g., API endpoints, CDN configuration)
+```
+
+## Backend Directory Structure
+
+```plaintext
+- controllers/: API controllers (e.g., handleLogin, handleRegistration, handleFileUpload)
+- routes/: API routes (e.g., /auth/login, /chat/send-message, /user/update-profile)
+- data/: Prisma and PlanetScale data storage integration
+- models/: Prisma models (e.g., User, Message, File)
+- migrations/: Prisma migration files
+- encryption/: Signal Protocol implementation for E2EE
+  - protocol/: Signal Protocol implementation files (e.g., signal-protocol.js)
+  - utils/: Encryption utility functions (e.g., encryptMessage, decryptMessage, encryptFile, decryptFile)
+- cdn/: CDN integration and file storage management functions
+- storage/: Temporary storage management functions (e.g., storeFile, deleteFile)
+- loadbalancer/: Load balancing implementation using HAProxy or Nginx
+- config/: Load balancer configuration files (e.g., haproxy.config, nginx.config)
+- p2p/: socket.io-p2p integration for local network messaging
+  - network/: Socket.io network files (e.g., socket-network.js, socket-peer.js)
+  - utils/: P2P utility functions (e.g., sendP2PMessage, handleP2PMessage)
+```
+
+## Conclusion
+
+With the proposed architecture and features, Exo aims to provide a secure, reliable, and efficient file sharing and messaging experience. By leveraging cutting-edge technologies such as the Signal Protocol, P2P messaging, offline-first storage, and real-time communication, Exo ensures user privacy, data integrity, and seamless communication. The outlined directory structure and tech stack will enable modularity, scalability, and maintainability of the codebase, facilitating future enhancements and improvements to the Exo app.
